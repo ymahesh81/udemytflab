@@ -19,7 +19,9 @@ variable "ec2_instance_count" {
 
 variable "ec2_instance_type" {
   description = "Enter the instance type"
-  default = "t2.micro"
-  type = string
+  # type = string
+  type = list(string)
+  default = ["t2.large", "t2.micro", "t2.small"]
+  # default = "t2.micro"
 
 }
