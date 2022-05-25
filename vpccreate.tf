@@ -59,7 +59,7 @@
 # resource "aws_route_table_association" "stg-routetable-association" {
 #   route_table_id = aws_route_table.stg-public-routetable.id
 #   subnet_id      = aws_subnet.stg-pubsubnet.id
-  
+
 
 # }
 

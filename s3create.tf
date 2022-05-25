@@ -25,3 +25,18 @@
 #     "Environment" = "${each.key}"
 #   }
 # }
+
+# locals {
+#   bucket-name = "${var.app_name}-${var.env_name}-bucket"
+# }
+
+# resource "aws_s3_bucket" "tfs3bucket00000" {
+#   bucket = local.bucket-name
+#   #acl = "private"
+#   #aws_s3_bucket_acl = "private"
+#   tags = {
+#     Name = local.bucket-name
+#     Env = var.env_name
+#   }
+# }
+
