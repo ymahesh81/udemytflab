@@ -13,14 +13,14 @@ provider "aws" {
   profile = "mahesh"
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraformstate04"
-    key = "dev/devenv.tfstate"
-    region = "ap-south-1"
-    dynamodb_table = "terraform-devstate-table"
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "terraformstate04"
+#     key = "dev/devenv.tfstate"
+#     region = "ap-south-1"
+#     dynamodb_table = "terraform-devstate-table"
+#   }
+# }
 /* provider "aws" {
   region  = "ap-southeast-1"
   profile = "default"
