@@ -16,7 +16,8 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraformstate04"
-    key = "dev/devenv.tfstate"
+    #key = "dev/devenv.tfstate"
+    key = "workspaces/env.tfstate"
     region = "ap-south-1"
     dynamodb_table = "terraform-devstate-table"
   }
