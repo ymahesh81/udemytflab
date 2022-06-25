@@ -2,9 +2,9 @@ resource "aws_instance" "newec2" {
   ami               = data.aws_ami.amznlinux.id
   instance_type     = var.ec2_instance_type
   #instance_type     = var.ec2_instance_type["small-app"]
-  count = terraform.workspace == "default" ? 2 : 1
+  #count = terraform.workspace == "default" ? 2 : 1
   availability_zone = "ap-south-1a"
-  # count = var.ec2_instance_count
+  count = var.ec2_instance_count
   key_name = "udemytflab"
   
   vpc_security_group_ids = [aws_security_group.SSH-SG.id, aws_security_group.HTTP-SG.id]
