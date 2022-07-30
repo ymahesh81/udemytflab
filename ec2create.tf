@@ -5,6 +5,10 @@ resource "aws_instance" "newec2" {
   #count = terraform.workspace == "default" ? 2 : 1
   availability_zone = "ap-south-1a"
   count = var.ec2_instance_count
+  ebs_block_device {
+    device_name = "/dev/xvda"
+    volume_type = "gp2"
+  }
   key_name = "udemytflab"
   
   vpc_security_group_ids = [aws_security_group.SSH-SG.id, aws_security_group.HTTP-SG.id]
