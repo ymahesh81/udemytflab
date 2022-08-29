@@ -6,7 +6,7 @@ output "ec2_public_ip" {
 output "ec2_private_ip" {
   description = "Ec2 DNS name"
   value       = aws_instance.newec2.*.private_ip
-  sensitive   = true
+  sensitive   = false
 }
 
 # output "ec2_security_group" {
